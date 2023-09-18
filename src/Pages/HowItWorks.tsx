@@ -168,17 +168,17 @@ const Right = styled.div`
 `;
 const Img2 = styled.img`
   position: absolute;
-  left: 300px;
-  top: 2650px;
-  z-index: -9999999;
+  left: 130px;
+  top: -32px;
+  /* z-index: -9999999; */
 `;
 const Img1 = styled.img`
-  position: relative;
-  top: 0;
+  /* top: 0; */
   z-index: -9999999;
 `;
 const Left = styled.div`
   width: auto;
+  position: relative;
 `;
 const Wrapper = styled.div`
   width: 83%;

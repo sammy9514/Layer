@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import bg from "../Assets/bg-2.jpg";
-import TableComponent from "./Table";
+import TableComponent from "../Pages/Table";
 import { BsBootstrap, BsTv } from "react-icons/bs";
 import { BiLogoHtml5, BiRocket } from "react-icons/bi";
 import phone from "../Assets/about-3.png";
@@ -33,10 +33,10 @@ const Additional = () => {
             <TableComponent Icon={BsTv} text="RESPONSIVE" />
             <TableComponent Icon={BiRocket} text="UNLIMITED SUPPORT" />
           </Table>
+          <ImgHolder>
+            <Img src={phone} />
+          </ImgHolder>
         </Hold>
-        <ImgHolder>
-          <Img src={phone} />
-        </ImgHolder>
       </Container>
     </div>
   );
@@ -48,44 +48,30 @@ const ImgHolder = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: -270px;
-  height: 400px;
-  @media screen and (max-width: 768px) {
-    margin-top: 200px;
-    bottom: -300px;
-  }
 `;
 const Img = styled.img`
-  @media screen and (max-width: 375px) {
-    width: 100%;
-  }
-  @media screen and (max-width: 425px) {
-    width: 100%;
+  @media (max-width: 885px) {
+    width: 90%;
   }
 `;
 
 const Table = styled.div`
   width: 100%;
-  height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 30px 0px; */
-  padding-bottom: 30px;
-
-  @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
-  }
+  padding: 30px 0px;
+  flex-wrap: wrap;
 `;
 
 const Hold = styled.div`
-  padding: 50px 0px 0px 0px;
+  padding: 50px 0px 00px 0px;
   width: 100%;
-  height: 84.8vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  flex-wrap: wrap;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 885px) {
     padding: 50px 0px 80px 0px;
     height: 100%;
     flex-wrap: wrap;
@@ -101,7 +87,7 @@ const Text = styled.div`
 
 const Wrapper = styled.div`
   width: 100%;
-  /* height: 50px; */
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,7 +102,7 @@ const Ball = styled.div`
 
 const TopWrapper = styled.div`
   width: 100%;
-  height: 70px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,14 +119,17 @@ const Line = styled.div<{ bcc: string }>`
 `;
 
 const W = styled.div`
-  height: 60px;
+  height: 100%;
   width: 100%;
   font-size: 36px;
   font-weight: 400;
   display: flex;
   color: white;
   justify-content: center;
-  //   align-items: center;
+
+  @media screen and (max-width: 500px) {
+    font-size: 29px;
+  }
 
   span {
     color: #e74c3cff;
@@ -149,15 +138,13 @@ const W = styled.div`
 `;
 
 const Container = styled.div`
-  height: 90vh;
+  height: 100%;
   width: 100%;
   background-image: url(${bg});
   background-attachment: fixed;
   position: relative;
-  margin-top: 70px;
-  z-index: -9999999;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 885px) {
     height: 100%;
     flex-wrap: wrap;
   }

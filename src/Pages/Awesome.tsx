@@ -163,8 +163,6 @@ const Container = styled.div`
   justify-content: center;
   margin-top: 70px;
   background: linear-gradient(to right, #e9f0ffff, #fcfaffff, #f8e9ffff);
-  @media screen and (max-width: 768px) {
-    height: 100%;
-    padding: 20px 0px 120px 0px;
-  }
+  padding: 20px 0px 120px 0px;
+  flex-wrap: wrap;
 `;

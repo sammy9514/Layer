@@ -91,7 +91,7 @@ const Left = styled.div`
     font-size: 15px;
     @media screen and (max-width: 768px) {
       font-size: 13px;
-      width: 100%;
+      width: 0%;
     }
   }
   @media screen and (max-width: 768px) {
